@@ -1,5 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+
+TableGen.propTypes = {
+    striped: PropTypes.bool,
+    bordered: PropTypes.bool,
+    hover: PropTypes.bool,
+    responsive: PropTypes.bool,
+};
+
+TableGen.defaultProps = {
+    striped: true,
+    bordered: true,
+    hover: true,
+    responsive: true,
+}
 
 //* Header's keys must be match to Row's keys.
 function TableGen(props) {
@@ -15,9 +30,9 @@ function TableGen(props) {
 
     const renderHeader = () => {
         return (
-            Object.values(props.header).map((title) => {
+            Object.keys(props.header).map((key) => {
                 return (
-                    <th>{title}</th>
+                    <th key={`header-${key}`}>{props.header[key]}</th>
                 );
             })
         );
@@ -28,7 +43,7 @@ function TableGen(props) {
         return (
             columnOrder.map((key) => {
                 return (
-                    <td>{row[key]}</td>
+                    <td key={`data-${key}`}>{row[key]}</td>
                 );
             })
         );
@@ -36,16 +51,21 @@ function TableGen(props) {
 
     const renderRows = () => {
         return (
-            props.rows.map((row) => {
+            props.rows.map((row, index) => {
                 return (
-                    <tr>{renderItemsInOrder(row)}</tr>
+                    <tr key={`row-${index}`}>{renderItemsInOrder(row)}</tr>
                 );
             })
         );
     }
 
     return (
-        <Table striped bordered hover>
+        <Table
+            striped={props.striped}
+            bordered={props.bordered}
+            hover={props.hover}
+            responsive={props.responsive}
+        >
             <thead>
                 <tr>
                     {renderHeader()}
