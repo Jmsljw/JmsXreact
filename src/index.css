@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Overrride Bootstrap */
+/* :root === html */
+/* CSS Variables */
+:root {
+  /*-----------------------------------------------------------------------------------*/
+  /* Height */
+  /*-----------------------------------------------------------------------------------*/
+  --height-screen: 100vh; /* 100% Viewport height */
+  --height-nav-bar-header-1: 90px;
+  --height-nav-bar-header-2: 53px;
+  /* --height-content: calc(var(--height-screen) - var(--height-nav-bar)); */
+  /*-----------------------------------------------------------------------------------*/
+  /* Color */
+  /*-----------------------------------------------------------------------------------*/
+  --color-theme-1: #D31145;
+  --color-theme-2: #B8123E;
+  --color-background-theme-1: #FAF9F3;
+  --color-footer-theme-1: #363E3F;
+  /*-----------------------------------------------------------------------------------*/
+  /* Font */
+  /*-----------------------------------------------------------------------------------*/
+  --font-color-1: #363E3F;
+  --font-color-2: #FAF9F3;
+  --font-family-1: "AIASans", "Calibri", sans-serif;
+  --font-family-2: "AIASans", "Calibri", sans-serif;
+  --font-size-nav-header: 1.25em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Reset all default browser CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* body {
+  
+} */

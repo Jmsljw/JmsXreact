@@ -1,0 +1,16 @@
+// change the theme
+$theme-colors: (
+  "primary": #D31145,
+  "secondary": #B8123E,
+    // "success":    $success,
+    // "info":       $info,
+    // "warning":    $warning,
+    // "danger":     $danger,
+    // "light":      $light,
+    // "dark":       $dark
+);
+
+$font-family-base: var(--font-family-1);
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
