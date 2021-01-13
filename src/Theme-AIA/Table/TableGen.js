@@ -6,14 +6,17 @@ TableGen.propTypes = {
     striped: PropTypes.bool,
     bordered: PropTypes.bool,
     hover: PropTypes.bool,
-    responsive: PropTypes.bool,
+    responsive: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.bool
+    ]),
 };
 
 TableGen.defaultProps = {
     striped: true,
-    bordered: true,
-    hover: true,
-    responsive: true,
+    bordered: false,
+    hover: false,
+    responsive: false,
 }
 
 //* Header's keys must be match to Row's keys.
