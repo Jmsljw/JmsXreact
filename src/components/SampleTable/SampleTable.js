@@ -4,7 +4,7 @@ import { Page, Table } from '../../Theme-AIA';
 //* Should be passed in as props.
 import trainingIcon from '../../Assets/schedule_trainings.png';
 
-function SampleTable() {
+function SampleTable(props) {
     const tableHeader = {
         id: '#',
         firstName: 'First Name',
@@ -43,6 +43,7 @@ function SampleTable() {
         },
     ];
 
+    //* Render.
     return (
         <Page
             title={'Sample of Table Listing'}

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { isTablet, isMobile } from 'react-device-detect';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 //* Image source
 import aiaLogo from '../../Assets/AIA-header-logo.png';
-import navBtn from '../../Assets/navBtn.png';
 
 //* CSS
 import './css/Nav-Desktop.css';

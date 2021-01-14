@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 //* CSS
-import './custom.scss';
+import './custom-bootstrap.scss';
 import './index.css';
 
 ReactDOM.render(
